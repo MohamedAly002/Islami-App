@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class VerseWidget extends StatelessWidget {
   String content;
@@ -13,7 +14,7 @@ class VerseWidget extends StatelessWidget {
       child: Text('$content [$verseindex]',
         textDirection: TextDirection.rtl,
         textAlign: TextAlign.center,
-        style:TextStyle(fontSize: 18),),
+        style:Theme.of(context).textTheme.headline6,),
     );
   }
 }

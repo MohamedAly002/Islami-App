@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islami_app/Home/SuraContent/Verse_Widget.dart';
 import 'package:islami_app/Home/SuraContent/sura_content_args.dart';
+import 'package:provider/provider.dart';
+
+import '../../provider/Setting_Provider.dart';
 
 class SuraContent extends StatefulWidget {
   static const String routeName = 'suracontent';
@@ -21,16 +24,18 @@ class _SuraContentState extends State<SuraContent> {
     if (verses.isEmpty) {
       readfiles(arg.index + 1);
     }
+    var settingProvider=Provider.of<SettingProvider>(context);
+
     return Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/images/main_background.png'),
+                image: AssetImage(settingProvider.getMainBackgroundimage()),
                 fit: BoxFit.fill)),
         child: Scaffold(
           appBar: AppBar(
             title: Text(arg.name),
             centerTitle: true,
-          ),
+           ),
           body: verses.isEmpty
               ? Center(
                   child: CircularProgressIndicator(),
@@ -49,7 +54,7 @@ class _SuraContentState extends State<SuraContent> {
                     itemCount: verses.length,
                   separatorBuilder: (context,index){
                       return Container(
-                        color: Theme.of(context).primaryColor,
+                        color: Theme.of(context).accentColor,
                         height: 1 ,
                         width: double.infinity,
                         margin: EdgeInsets.symmetric(horizontal: 65),
