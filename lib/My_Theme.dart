@@ -30,6 +30,10 @@ class MyTheme {
             fontSize: 18,
             color: Colors.black
         ),
+        headline5: TextStyle(
+          fontSize: 28,
+          color: Colors.black,
+        ),
       ),
       scaffoldBackgroundColor: Colors.transparent,
       primaryColor: LightPrimary,
@@ -73,6 +77,10 @@ class MyTheme {
       subtitle2: TextStyle(
         fontSize: 18,
             color: Colors.white
+      ),
+      headline5: TextStyle(
+        fontSize: 28,
+        color: Colors.black,
       ),
     ),
       scaffoldBackgroundColor: Colors.transparent,
