@@ -15,7 +15,7 @@ class _HadethTabState extends State<HadethTab> {
   @override
   Widget build(BuildContext context) {
     if(allHadethList.isEmpty)
-      readhadeathfile();
+       readhadeathfile();
 
 
     readhadeathfile();
@@ -64,8 +64,7 @@ class _HadethTabState extends State<HadethTab> {
 
   }
     allHadethList=HadethList;
-  setState(() {});
-    print(allHadethList);
+         setState(() {});
 
   }
 }
