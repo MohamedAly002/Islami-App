@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:islami_app/Home/Quran/Quran_titles.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class QuranTab extends StatelessWidget {
   List<String> SuraNames = [
     "الفاتحه",
@@ -134,7 +134,7 @@ class QuranTab extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(6.0),
             child: Text(
-              'Chapter Name',
+              AppLocalizations.of(context)!.chapter_name,
               style: Theme.of(context).textTheme.headline6,
             ),
           ),

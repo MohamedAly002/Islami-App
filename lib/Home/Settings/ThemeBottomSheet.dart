@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../../provider/Setting_Provider.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class ThemeBottomSheet extends StatefulWidget {
   const ThemeBottomSheet({Key? key}) : super(key: key);
@@ -27,7 +27,7 @@ class _ThemeBottomSheetState extends State<ThemeBottomSheet> {
                  settingProvider.changethememode(ThemeMode.dark);
                },
                  child:settingProvider.isDarkMode()?
-                 selectedItem('Dark'):unselectedItem('Dark')),
+                 selectedItem(AppLocalizations.of(context)!.dark):unselectedItem(AppLocalizations.of(context)!.dark)),
             SizedBox(height:  12,),
             InkWell(
               onTap: (){
@@ -35,7 +35,7 @@ class _ThemeBottomSheetState extends State<ThemeBottomSheet> {
               },
                 child:
                 settingProvider.isDarkMode()?
-            unselectedItem('Light'):selectedItem('Light'))
+            unselectedItem(AppLocalizations.of(context)!.light):selectedItem(AppLocalizations.of(context)!.light))
 
           ],
         ),

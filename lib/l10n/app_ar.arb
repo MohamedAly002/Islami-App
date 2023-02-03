@@ -1,0 +1,15 @@
+{
+
+"app_title":"اسلامي",
+"chapter_name":"اسم السورة",
+"quran_icon":"القرآن",
+"hadeth_icon":"الحديث",
+"sebha_icon":"السبحة",
+"radio_icon":"الاذاعة",
+"setting_icon":"الاعدادات",
+"theme":"السمة",
+ "language":"اللغة",
+ "light":"فاتح",
+  "dark":"داكن"
+
+}

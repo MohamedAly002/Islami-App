@@ -1,0 +1,15 @@
+{
+
+ "app_title":"Islami",
+ "chapter_name":"Chapter Name",
+ "quran_icon":"Quran",
+ "hadeth_icon":"Hadeth",
+ "sebha_icon":"Sebha",
+ "radio_icon":"Radio",
+ "setting_icon":"Settings",
+ "theme":"Theme",
+ "language":"Language",
+"light":"Light",
+ "dark":"Dark"
+ }
+

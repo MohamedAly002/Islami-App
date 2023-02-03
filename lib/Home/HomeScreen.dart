@@ -6,9 +6,9 @@ import 'package:islami_app/Home/Radio/Radio_Tab.dart';
 import 'package:islami_app/Home/Settings/Setting_Tab.dart';
 import 'package:islami_app/My_Theme.dart';
 import 'package:provider/provider.dart';
-
 import '../provider/Setting_Provider.dart';
 import 'Sebha/Sebha_Tab.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routeName = 'HomeScreen';
@@ -32,7 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
               fit: BoxFit.fill)),
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Islami'),
+          title: Text(AppLocalizations.of(context)!.app_title),
           centerTitle: true,
         ),
         bottomNavigationBar: BottomNavigationBar(
@@ -45,23 +45,23 @@ class _HomeScreenState extends State<HomeScreen> {
             BottomNavigationBarItem(
                 backgroundColor: Theme.of(context).primaryColor,
                 icon: ImageIcon(AssetImage('assets/images/moshaf_blue.png')),
-                label: 'Quran'),
+                label: AppLocalizations.of(context)!.quran_icon),
             BottomNavigationBarItem(
                 backgroundColor: Theme.of(context).primaryColor,
                 icon: ImageIcon(AssetImage('assets/images/hadeth.png')),
-                label: 'Hadeth'),
+                label: AppLocalizations.of(context)!.hadeth_icon),
             BottomNavigationBarItem(
                 backgroundColor: Theme.of(context).primaryColor,
                 icon: ImageIcon(AssetImage('assets/images/sebha.png')),
-                label: 'Sebha'),
+                label: AppLocalizations.of(context)!.sebha_icon),
             BottomNavigationBarItem(
                 backgroundColor: Theme.of(context).primaryColor,
                 icon: ImageIcon(AssetImage('assets/images/radio_blue.png')),
-                label: 'Radio'),
+                label: AppLocalizations.of(context)!.radio_icon),
             BottomNavigationBarItem(
                 backgroundColor: Theme.of(context).primaryColor,
                 icon: Icon(Icons.settings),
-                label: 'Settings'),
+                label: AppLocalizations.of(context)!.setting_icon),
           ],
         ),
         body: Tabs[SelectIndex],
